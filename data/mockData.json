@@ -1,0 +1,244 @@
+{
+  "faultTypes": [
+    {
+      "code": "NO_CONNECTION",
+      "label": "No Connection",
+      "description": "Broadband service is completely offline. No internet access.",
+      "priority": "critical",
+      "targetResolutionHours": 4
+    },
+    {
+      "code": "SLOW_SPEED",
+      "label": "Slow Speed",
+      "description": "Internet speeds are significantly below the expected plan speeds.",
+      "priority": "high",
+      "targetResolutionHours": 24
+    },
+    {
+      "code": "INTERMITTENT",
+      "label": "Intermittent Connection",
+      "description": "Connection drops in and out repeatedly throughout the day.",
+      "priority": "high",
+      "targetResolutionHours": 24
+    },
+    {
+      "code": "PHONE_LINE",
+      "label": "Phone Line Fault",
+      "description": "Voice over broadband (VoIP) service is not working or has poor quality.",
+      "priority": "medium",
+      "targetResolutionHours": 48
+    },
+    {
+      "code": "EQUIPMENT_FAULT",
+      "label": "Equipment Fault",
+      "description": "NBN connection box or router is showing fault indicators or not powering on.",
+      "priority": "medium",
+      "targetResolutionHours": 48
+    },
+    {
+      "code": "PLANNED_OUTAGE",
+      "label": "Suspected Planned Outage",
+      "description": "Customer believes service is down due to scheduled maintenance.",
+      "priority": "low",
+      "targetResolutionHours": 72
+    }
+  ],
+
+  "faultStatuses": [
+    {
+      "code": "SUBMITTED",
+      "label": "Submitted",
+      "description": "Fault report has been received and is awaiting triage."
+    },
+    {
+      "code": "IN_PROGRESS",
+      "label": "In Progress",
+      "description": "A technician has been assigned and is investigating the fault."
+    },
+    {
+      "code": "PENDING_CUSTOMER",
+      "label": "Pending Customer Action",
+      "description": "NBN technician requires access to premises or further information from customer."
+    },
+    {
+      "code": "ESCALATED",
+      "label": "Escalated",
+      "description": "Fault has been escalated to a network specialist team."
+    },
+    {
+      "code": "RESOLVED",
+      "label": "Resolved",
+      "description": "Fault has been resolved and service restored."
+    }
+  ],
+
+  "serviceTypes": [
+    { "code": "FTTP", "label": "Fibre to the Premises" },
+    { "code": "FTTN", "label": "Fibre to the Node" },
+    { "code": "FTTC", "label": "Fibre to the Curb" },
+    { "code": "FTTB", "label": "Fibre to the Building" },
+    { "code": "HFC",  "label": "Hybrid Fibre Coaxial" },
+    { "code": "FIXED_WIRELESS", "label": "Fixed Wireless" },
+    { "code": "SATELLITE", "label": "Sky Muster Satellite" }
+  ],
+
+  "sampleCustomers": [
+    {
+      "customerId": "CUS-001-NSW",
+      "name": "Sarah Mitchell",
+      "serviceType": "FTTC",
+      "address": {
+        "unit": null,
+        "streetNumber": "14",
+        "streetName": "Banksia Grove",
+        "suburb": "Cherrybrook",
+        "state": "NSW",
+        "postcode": "2126",
+        "formatted": "14 Banksia Grove, Cherrybrook NSW 2126"
+      },
+      "planSpeed": "100/20 Mbps",
+      "rspName": "Aussie Broadband"
+    },
+    {
+      "customerId": "CUS-002-VIC",
+      "name": "David Nguyen",
+      "serviceType": "FTTP",
+      "address": {
+        "unit": "4",
+        "streetNumber": "78",
+        "streetName": "Lygon Street",
+        "suburb": "Brunswick",
+        "state": "VIC",
+        "postcode": "3056",
+        "formatted": "4/78 Lygon Street, Brunswick VIC 3056"
+      },
+      "planSpeed": "1000/50 Mbps",
+      "rspName": "Superloop"
+    },
+    {
+      "customerId": "CUS-003-QLD",
+      "name": "Karen Papadopoulos",
+      "serviceType": "FTTN",
+      "address": {
+        "unit": null,
+        "streetNumber": "22",
+        "streetName": "Jacaranda Avenue",
+        "suburb": "Toowoomba",
+        "state": "QLD",
+        "postcode": "4350",
+        "formatted": "22 Jacaranda Avenue, Toowoomba QLD 4350"
+      },
+      "planSpeed": "50/20 Mbps",
+      "rspName": "Telstra"
+    },
+    {
+      "customerId": "CUS-004-QLD",
+      "name": "James O'Brien",
+      "serviceType": "FIXED_WIRELESS",
+      "address": {
+        "unit": null,
+        "streetNumber": "840",
+        "streetName": "Warrego Highway",
+        "suburb": "Dalby",
+        "state": "QLD",
+        "postcode": "4405",
+        "formatted": "840 Warrego Highway, Dalby QLD 4405"
+      },
+      "planSpeed": "25/5 Mbps",
+      "rspName": "Aussie Broadband",
+      "regionalNote": "Fixed wireless tower within 3km. Signal strength may be affected by weather."
+    },
+    {
+      "customerId": "CUS-005-SA",
+      "name": "Priya Sharma",
+      "serviceType": "HFC",
+      "address": {
+        "unit": null,
+        "streetNumber": "5",
+        "streetName": "Pirie Street",
+        "suburb": "Adelaide",
+        "state": "SA",
+        "postcode": "5000",
+        "formatted": "5 Pirie Street, Adelaide SA 5000"
+      },
+      "planSpeed": "250/25 Mbps",
+      "rspName": "iiNet"
+    },
+    {
+      "customerId": "CUS-006-WA",
+      "name": "Tom Walters",
+      "serviceType": "FTTC",
+      "address": {
+        "unit": null,
+        "streetNumber": "19",
+        "streetName": "Stirling Highway",
+        "suburb": "Nedlands",
+        "state": "WA",
+        "postcode": "6009",
+        "formatted": "19 Stirling Highway, Nedlands WA 6009"
+      },
+      "planSpeed": "100/20 Mbps",
+      "rspName": "TPG"
+    },
+    {
+      "customerId": "CUS-007-TAS",
+      "name": "Emily Blackwood",
+      "serviceType": "FTTP",
+      "address": {
+        "unit": null,
+        "streetNumber": "3",
+        "streetName": "Salamanca Place",
+        "suburb": "Hobart",
+        "state": "TAS",
+        "postcode": "7004",
+        "formatted": "3 Salamanca Place, Hobart TAS 7004"
+      },
+      "planSpeed": "500/50 Mbps",
+      "rspName": "Launtel"
+    },
+    {
+      "customerId": "CUS-008-NT",
+      "name": "Michael Anderson",
+      "serviceType": "SATELLITE",
+      "address": {
+        "unit": null,
+        "streetNumber": "12",
+        "streetName": "Litchfield Road",
+        "suburb": "Batchelor",
+        "state": "NT",
+        "postcode": "0845",
+        "formatted": "12 Litchfield Road, Batchelor NT 0845"
+      },
+      "planSpeed": "25/5 Mbps",
+      "rspName": "Activ8me",
+      "regionalNote": "Sky Muster satellite. Latency typically 600-800ms. Weather-sensitive."
+    }
+  ],
+
+  "sampleFaultReports": [
+    {
+      "customerId": "CUS-001-NSW",
+      "faultType": "NO_CONNECTION",
+      "address": "14 Banksia Grove, Cherrybrook NSW 2126",
+      "description": "No internet since 6am this morning. All lights on the NBN box are off except the power light which is red. Have tried rebooting twice."
+    },
+    {
+      "customerId": "CUS-003-QLD",
+      "faultType": "SLOW_SPEED",
+      "address": "22 Jacaranda Avenue, Toowoomba QLD 4350",
+      "description": "Speeds have dropped to less than 5Mbps since yesterday afternoon. On a 50Mbps plan. Have run multiple speed tests across different devices and times of day."
+    },
+    {
+      "customerId": "CUS-004-QLD",
+      "faultType": "INTERMITTENT",
+      "address": "840 Warrego Highway, Dalby QLD 4405",
+      "description": "Connection drops every 30-40 minutes and takes about 5 minutes to restore. Has been happening for 3 days. No major weather events in the area."
+    },
+    {
+      "customerId": "CUS-002-VIC",
+      "faultType": "PHONE_LINE",
+      "address": "4/78 Lygon Street, Brunswick VIC 3056",
+      "description": "VoIP phone calls have echo and crackling. Happens on all calls. Internet is working fine. Issue started after the NBN upgrade work in the street last Tuesday."
+    }
+  ]
+}
